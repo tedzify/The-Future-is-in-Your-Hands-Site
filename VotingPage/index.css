@@ -1,0 +1,258 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+.main-container {
+  overflow: hidden;
+}
+
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.main-container {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  margin: 0 auto;
+  background: #ffffff;
+  overflow: hidden;
+}
+.flex-row-dfa {
+  position: relative;
+  width: 1472px;
+  height: 851.084px;
+  margin: -118px 0 0 0;
+  z-index: 11;
+}
+.vote {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 719px;
+  top: 0;
+  left: 0;
+  color: #dddddd;
+  font-family: Inria Serif, var(--default-font-family);
+  font-size: 600px;
+  font-weight: 700;
+  line-height: 719px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 3;
+}
+.rectangle {
+  position: absolute;
+  width: 1440px;
+  height: 646px;
+  top: 0;
+  left: 0;
+  background: #e9e9e9;
+  z-index: 2;
+}
+.empty {
+  position: absolute;
+  width: 758px;
+  height: 551px;
+  top: 203px;
+  left: 633px;
+  background: url(./assets/images/Female.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 5;
+}
+.div {
+  position: absolute;
+  width: 752px;
+  height: 536px;
+  top: 218px;
+  left: 43px;
+  background: url(./assets/images/Male.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 6;
+}
+.rectangle-1 {
+  position: absolute;
+  width: 411.116px;
+  height: 582.488px;
+  top: 268px;
+  left: 214px;
+  background: #e7e7e7;
+  transform: rotate(0.21deg);
+  z-index: 5;
+  border-radius: 27px;
+}
+.rectangle-2 {
+  position: relative;
+  width: 409.455px;
+  height: 126.882px;
+  margin: 455.606px 0 0 0px;
+  background: #ffc300;
+  transform: rotate(0.21deg);
+  z-index: 10;
+  overflow: visible auto;
+  border-radius: 11px;
+}
+.candidate-name {
+  position: relative;
+  width: 239px;
+  height: 80px;
+  margin: 25.394px 0 0 27px;
+  font-family: Josefin Sans, var(--default-font-family);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: left;
+  z-index: 13;
+}
+.candidate {
+  position: relative;
+  color: #b70909;
+  font-family: Josefin Sans, var(--default-font-family);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: left;
+}
+.empty-class {
+  position: relative;
+  color: #5b5b5b;
+  font-family: Josefin Sans, var(--default-font-family);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: left;
+}
+.name {
+  position: relative;
+  color: #ffffff;
+  font-family: Josefin Sans, var(--default-font-family);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: left;
+}
+.rectangle-3 {
+  position: absolute;
+  width: 411.966px;
+  height: 583.084px;
+  top: 268px;
+  left: 806px;
+  background: #dedede;
+  transform: rotate(0.29deg);
+  z-index: 8;
+  border-radius: 27px;
+}
+.rectangle-4 {
+  position: relative;
+  width: 409.615px;
+  height: 123.351px;
+  margin: 459.733px 0 0 0px;
+  background: #f3bc0b;
+  transform: rotate(0.29deg);
+  z-index: 8;
+  overflow: visible auto;
+  border-radius: 11px;
+}
+.candidate-name-5 {
+  position: relative;
+  width: 239px;
+  height: 80px;
+  margin: 21.267px 0 0 31px;
+  font-family: Josefin Sans, var(--default-font-family);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: left;
+  z-index: 14;
+}
+.candidate-6 {
+  position: relative;
+  color: #a92525;
+  font-family: Josefin Sans, var(--default-font-family);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: left;
+}
+.empty-7 {
+  position: relative;
+  color: #5b5a5a;
+  font-family: Josefin Sans, var(--default-font-family);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: left;
+}
+.name-8 {
+  position: relative;
+  color: #ffffff;
+  font-family: Josefin Sans, var(--default-font-family);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: left;
+}
+.rectangle-9 {
+  position: absolute;
+  width: 1440px;
+  height: 133px;
+  top: 646px;
+  left: 0;
+  background: #ba0003;
+  z-index: 1;
+}
+.flex-row-c {
+  position: relative;
+  width: 876px;
+  height: 306px;
+  margin: 33.916px 0 0 282px;
+  font-size: 0px;
+  z-index: 1;
+  overflow: visible auto;
+}
+.candidates {
+  display: block;
+  position: relative;
+  height: 58px;
+  margin: 144px 0 0 295px;
+  color: #929292;
+  font-family: Inria Serif, var(--default-font-family);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 57.552px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 1;
+}
+.presidential {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  width: 876px;
+  height: 306px;
+  top: 0;
+  left: 0;
+  color: #4b4b4b;
+  font-family: Inria Serif, var(--default-font-family);
+  font-size: 128px;
+  font-weight: 700;
+  line-height: 153.472px;
+  text-align: left;
+  text-overflow: initial;
+  overflow: hidden;
+}
