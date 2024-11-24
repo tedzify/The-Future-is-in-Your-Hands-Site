@@ -1,33 +1,31 @@
+/* Global Styles */
 :root {
   --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-    "Source Han Sans CN", sans-serif;
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft Yahei UI", "Microsoft Yahei", "Source Han Sans CN", sans-serif;
 }
 
-.main-container {
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #ffffff; /* Background gradient */
+  background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   overflow: hidden;
 }
 
-.main-container,
-.main-container * {
-  box-sizing: border-box;
-}
-
-input,
-select,
-textarea,
-button {
-  outline: 0;
-}
-
+/* Center Container */
 .main-container {
   position: relative;
-  width: 1440px;
-  height: 1024px;
-  margin: 0 auto;
-  background: #ffffff;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 100%;
 }
 .year-2024 {
   display: flex;
@@ -35,91 +33,90 @@ button {
   justify-content: flex-start;
   position: absolute;
   height: 719px;
-  top: -115px;
-  left: 65px;
+  top: -175px;
+  left: -200px;
   color: #ece400;
   font-family: Inria Serif, var(--default-font-family);
-  font-size: 600px;
+  font-size: 400px;
   font-weight: 700;
   line-height: 719px;
   text-align: left;
   white-space: nowrap;
 }
-.empty {
+
+/* Background Layer */
+.background-layer {
   position: absolute;
-  width: 1249px;
+  overflow: hidden;
+  z-index: 0;
+  width: 1200px;
   height: 1280px;
-  top: -80px;
-  left: 49px;
-  background: url(./assets/images/e594d1f7a1dd88bd9eff4ff88fcb05729dcd02c2.png)
+  top: -100px;
+  left:-350px;
+  background: url(/Homepage/assets/images/e594d1f7a1dd88bd9eff4ff88fcb05729dcd02c2.png)
     no-repeat center;
   background-size: cover;
-  z-index: 2;
-  color: green;
+  z-index: 0;
+  color: green; /* Place behind the carousel */
 }
-.rectangle {
-  position: absolute;
-  width: 345px;
-  height: 476px;
-  top: 295px;
-  left: 502px;
-  background: url(./assets/images/0d9c526f-2429-4d9d-9441-c28160e73d74.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 1;
+
+/* 3D Rotating Carousel */
+.scope {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  transform-style: preserve-3d;
+  margin: auto;
+  animation: slid 20s linear infinite; /* Continuous rotation */
+  animation-play-state: running; /* Ensure the animation starts playing */
 }
-.rectangle-1 {
-  position: absolute;
-  width: 252px;
-  height: 558px;
-  top: 295px;
-  left: 910px;
-  background: url(./assets/images/1f51adf2-d931-4e18-8a56-aa8ce45128aa.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 3;
+
+/* Stop rotation when hovered */
+.scope:hover {
+  animation-play-state: paused; /* Pause the animation on hover */
 }
-.rectangle-one {
+
+/* Rectangles with Images */
+.scope span {
   position: absolute;
-  width: 252px;
-  height: 558px;
-  top: 295px;
-  left: 163px;
-  background: url(./assets/images/42520f54-45fc-4a18-ac6b-33f33e9e85f2.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 70%;  /* Reduced width */
+  height: 60%; /* Reduced height */
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(450px) translateY(150px); /* Increased Y translation to move down */
+  border-radius: 10px;
+  overflow: hidden; /* Ensures the image stays within bounds */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transition-delay: 0.2s; /* Delay before the rectangle hover effect */
 }
-.rectangle-two {
-  position: absolute;
-  width: 252px;
-  height: 558px;
-  top: 450px;
-  left: 895px;
-  background: url(./assets/images/044d28c0-7f4b-41bc-8912-cffb5e0206f3.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 6;
+
+.scope span img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
-.rectangle-three {
-  position: absolute;
-  width: 252px;
-  height: 558px;
-  top: 450px;
-  left: 180px;
-  background: url(./assets/images/2c6f03db-26e4-4851-a1e3-ba39fb3dad27.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 7;
+
+/* Hover Effect for Rectangles */
+.scope span:hover img {
+  transform: translateY(-30px) scale(1.2); /* Lift and scale on hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+  transition-delay: 0s; /* No delay on hover for instant effect */
 }
-.rectangle-four {
-  position: absolute;
-  width: 345px;
-  height: 476px;
-  top: 574px;
-  left: 502px;
-  background: url(./assets/images/b094b216-7e19-4d35-93b4-0a9f008c1270.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 5;
+
+/* Delayed return on unhover */
+.scope span img {
+  transition-delay: 0.3s; /* Smooth delay when unhovered */
+}
+
+/* Keyframes for Continuous Rotation */
+@keyframes slid {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
 }
