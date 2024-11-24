@@ -114,6 +114,7 @@ html, body {
     line-height: 39px;
     padding: 0;
     transition: color 0.3s ease;
+    border-radius: 15px;
   }
   
   #rectangle-button::after {
