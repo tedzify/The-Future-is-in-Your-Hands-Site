@@ -68,8 +68,7 @@ button {
   height: 551px;
   top: 203px;
   left: 633px;
-  background: url(./assets/images/Female.png)
-    no-repeat center;
+  background: url("../images/Candidates/Female.png") no-repeat center;
   background-size: cover;
   z-index: 5;
 }
@@ -79,8 +78,7 @@ button {
   height: 536px;
   top: 218px;
   left: 43px;
-  background: url(./assets/images/Male.png)
-    no-repeat center;
+  background: url("../images/Candidates/Male.png") no-repeat center;
   background-size: cover;
   z-index: 6;
 }
