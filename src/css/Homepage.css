@@ -1,8 +1,9 @@
 /* Global Styles */
 :root {
   --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
-    "Microsoft Yahei UI", "Microsoft Yahei", "Source Han Sans CN", sans-serif;
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
 }
 
 body {
@@ -52,8 +53,8 @@ body {
   width: 1200px;
   height: 1280px;
   top: -100px;
-  left:-350px;
-  background: url(/Homepage/assets/images/e594d1f7a1dd88bd9eff4ff88fcb05729dcd02c2.png)
+  left: -350px;
+  background: url("../images/Homepage/e594d1f7a1dd88bd9eff4ff88fcb05729dcd02c2.png")
     no-repeat center;
   background-size: cover;
   z-index: 0;
@@ -81,7 +82,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 70%;  /* Reduced width */
+  width: 70%; /* Reduced width */
   height: 60%; /* Reduced height */
   transform-origin: center;
   transform-style: preserve-3d;
