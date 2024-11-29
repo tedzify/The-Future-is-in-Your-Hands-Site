@@ -1,11 +1,31 @@
+/* Root variables */
 :root {
   --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-    "Source Han Sans CN", sans-serif;
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft Yahei UI", "Microsoft Yahei", "Source Han Sans CN", sans-serif;
+}
+
+/* Prevent scrolling */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Disables scrolling */
+  height: 100%; /* Ensures the full screen is covered */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
 }
 
 .main-container {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  background: #ffffff;
   overflow: hidden;
 }
 
@@ -14,243 +34,160 @@
   box-sizing: border-box;
 }
 
-input,
-select,
-textarea,
-button {
-  outline: 0;
-}
-
-.main-container {
-  position: relative;
-  width: 1440px;
-  height: 1024px;
-  margin: 0 auto;
-  background: #ffffff;
-  overflow: hidden;
-}
-.flex-row-dfa {
-  position: relative;
-  width: 1472px;
-  height: 851.084px;
-  margin: -118px 0 0 0;
-  z-index: 11;
-}
+/* Styling for "VOTE" and main layout */
 .vote {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: absolute;
-  height: 719px;
-  top: 0;
-  left: 0;
+  position: relative;
+  height: 850px;
+  width: 100%;
+  top: 10px;
+  left: 100px;
   color: #dddddd;
   font-family: Inria Serif, var(--default-font-family);
-  font-size: 600px;
+  font-size: 500px;
   font-weight: 700;
-  line-height: 719px;
-  text-align: left;
-  white-space: nowrap;
+  line-height: 675px;
   z-index: 3;
+  text-align: center;
 }
+
 .rectangle {
   position: absolute;
-  width: 1440px;
-  height: 646px;
+  width: 100%;
+  height: 1024px;
   top: 0;
   left: 0;
   background: #e9e9e9;
   z-index: 2;
 }
-.empty {
+
+/* Added divs for images */
+.image-1 {
   position: absolute;
-  width: 758px;
-  height: 551px;
-  top: 203px;
-  left: 633px;
-  background: url("../images/Candidates/Female.png") no-repeat center;
+  width: 550px;
+  height: 336px;
+  top: 240px;
+  left: 175px;
+  background: url('/src/images/Candidates/Male.png') no-repeat center;
   background-size: cover;
   z-index: 5;
 }
-.div {
+
+.image-2 {
   position: absolute;
-  width: 752px;
-  height: 536px;
-  top: 218px;
-  left: 43px;
-  background: url("../images/Candidates/Male.png") no-repeat center;
+  width: 550px;
+  height: 336px;
+  top: 240px;
+  left: 775px; /* Centered with offset */
+  background: url('/src/images/Candidates/Female.png') no-repeat center;
   background-size: cover;
-  z-index: 6;
-}
-.rectangle-1 {
-  position: absolute;
-  width: 411.116px;
-  height: 582.488px;
-  top: 268px;
-  left: 214px;
-  background: #e7e7e7;
-  transform: rotate(0.21deg);
   z-index: 5;
-  border-radius: 27px;
 }
-.rectangle-2 {
-  position: relative;
+
+.rectangle-box {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  top: 550px;
+  left: 0;
+  background: #ba0003;
+  z-index: 4;
+}
+
+/* Candidate buttons */
+.rectangle-box-1 {
+  position: absolute;
   width: 409.455px;
-  height: 126.882px;
-  margin: 455.606px 0 0 0px;
+  height: 100px;
+  top: 575px;
+  left: calc(50% - 520px); /* Centered with offset */
   background: #ffc300;
-  transform: rotate(0.21deg);
-  z-index: 10;
-  overflow: visible auto;
   border-radius: 11px;
+  z-index: 5;
 }
+
+.rectangle-3 {
+  position: absolute;
+  width: 409.615px;
+  height: 100px;
+  top: 575px;
+  left: calc(50% + 110px); /* Centered with offset */
+  background: #f3bc0b;
+  border-radius: 11px;
+  z-index: 5;
+}
+
 .candidate-name {
   position: relative;
   width: 239px;
   height: 80px;
-  margin: 25.394px 0 0 27px;
+  margin: 15px auto;
+  cursor: pointer;
   font-family: Josefin Sans, var(--default-font-family);
   font-size: 40px;
   font-weight: 700;
-  line-height: 40px;
-  text-align: left;
-  z-index: 13;
+  background: transparent;
+  border: none;
+  text-align: center;
 }
-.candidate {
-  position: relative;
-  color: #b70909;
-  font-family: Josefin Sans, var(--default-font-family);
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 40px;
-  text-align: left;
-}
-.empty-class {
-  position: relative;
-  color: #5b5b5b;
-  font-family: Josefin Sans, var(--default-font-family);
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 40px;
-  text-align: left;
-}
-.name {
-  position: relative;
-  color: #ffffff;
-  font-family: Josefin Sans, var(--default-font-family);
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 40px;
-  text-align: left;
-}
-.rectangle-3 {
-  position: absolute;
-  width: 411.966px;
-  height: 583.084px;
-  top: 268px;
-  left: 806px;
-  background: #dedede;
-  transform: rotate(0.29deg);
-  z-index: 8;
-  border-radius: 27px;
-}
-.rectangle-4 {
-  position: relative;
-  width: 409.615px;
-  height: 123.351px;
-  margin: 459.733px 0 0 0px;
-  background: #f3bc0b;
-  transform: rotate(0.29deg);
-  z-index: 8;
-  overflow: visible auto;
-  border-radius: 11px;
-}
-.candidate-name-5 {
+
+.candidate-name-4 {
   position: relative;
   width: 239px;
   height: 80px;
-  margin: 21.267px 0 0 31px;
+  margin: 15px auto;
+  cursor: pointer;
   font-family: Josefin Sans, var(--default-font-family);
   font-size: 40px;
   font-weight: 700;
-  line-height: 40px;
-  text-align: left;
-  z-index: 14;
+  background: transparent;
+  border: none;
+  text-align: center;
 }
-.candidate-6 {
-  position: relative;
-  color: #a92525;
-  font-family: Josefin Sans, var(--default-font-family);
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 40px;
-  text-align: left;
-}
-.empty-7 {
-  position: relative;
-  color: #5b5a5a;
-  font-family: Josefin Sans, var(--default-font-family);
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 40px;
-  text-align: left;
-}
-.name-8 {
-  position: relative;
-  color: #ffffff;
-  font-family: Josefin Sans, var(--default-font-family);
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 40px;
-  text-align: left;
-}
-.rectangle-9 {
-  position: absolute;
-  width: 1440px;
-  height: 133px;
-  top: 646px;
-  left: 0;
-  background: #ba0003;
-  z-index: 1;
-}
+
 .flex-row-c {
   position: relative;
   width: 876px;
   height: 306px;
-  margin: 33.916px 0 0 282px;
-  font-size: 0px;
+  margin: 33.916px auto;
   z-index: 1;
-  overflow: visible auto;
 }
+
+.flex-row-c {
+  position: relative;
+  width: 100%; /* Ensure it spans the container */
+  height: auto; /* Adjust height to fit content */
+  margin-top: 100px; /* Add spacing from other elements */
+  text-align: center;
+  z-index: 10; /* Ensure it's on top of other elements */
+}
+
 .candidates {
   display: block;
   position: relative;
-  height: 58px;
-  margin: 144px 0 0 295px;
-  color: #929292;
+  margin: 0 auto;
+  top: 50px;
+  color: #e10000;
   font-family: Inria Serif, var(--default-font-family);
   font-size: 48px;
   font-weight: 700;
-  line-height: 57.552px;
-  text-align: left;
-  white-space: nowrap;
-  z-index: 1;
+  line-height: 1.2;
+  z-index: 11;
+  text-align: center;
 }
+
 .presidential {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: absolute;
-  width: 876px;
-  height: 306px;
-  top: 0;
-  left: 0;
+  display: block;
+  position: relative; /* Changed to relative */
+  margin-top: 20px;
+  top: -175px;
   color: #4b4b4b;
   font-family: Inria Serif, var(--default-font-family);
   font-size: 128px;
   font-weight: 700;
-  line-height: 153.472px;
-  text-align: left;
-  text-overflow: initial;
-  overflow: hidden;
+  line-height: 1.2;
+  z-index: 12;
+  text-align: center;
+  white-space: nowrap; /* Prevent text wrapping */
 }
+
+/* Debugging Borders (Temporary) */
