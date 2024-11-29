@@ -1,17 +1,17 @@
-/* Root variables */
+
 :root {
   --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
     "Microsoft Yahei UI", "Microsoft Yahei", "Source Han Sans CN", sans-serif;
 }
 
-/* Prevent scrolling */
+
 html,
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Disables scrolling */
-  height: 100%; /* Ensures the full screen is covered */
+  overflow: hidden; 
+  height: 100%; 
 }
 
 body {
@@ -34,7 +34,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Styling for "VOTE" and main layout */
+
 .vote {
   position: relative;
   height: 850px;
@@ -60,7 +60,7 @@ body {
   z-index: 2;
 }
 
-/* Added divs for images */
+
 .image-1 {
   position: absolute;
   width: 550px;
@@ -77,7 +77,7 @@ body {
   width: 550px;
   height: 336px;
   top: 240px;
-  left: 775px; /* Centered with offset */
+  left: 775px;
   background: url('/src/images/Candidates/Female.png') no-repeat center;
   background-size: cover;
   z-index: 5;
@@ -93,13 +93,13 @@ body {
   z-index: 4;
 }
 
-/* Candidate buttons */
+
 .rectangle-box-1 {
   position: absolute;
   width: 409.455px;
   height: 100px;
   top: 575px;
-  left: calc(50% - 520px); /* Centered with offset */
+  left: calc(50% - 520px); 
   background: #ffc300;
   border-radius: 11px;
   z-index: 5;
@@ -110,7 +110,7 @@ body {
   width: 409.615px;
   height: 100px;
   top: 575px;
-  left: calc(50% + 110px); /* Centered with offset */
+  left: calc(50% + 110px); 
   background: #f3bc0b;
   border-radius: 11px;
   z-index: 5;
@@ -154,11 +154,11 @@ body {
 
 .flex-row-c {
   position: relative;
-  width: 100%; /* Ensure it spans the container */
-  height: auto; /* Adjust height to fit content */
-  margin-top: 100px; /* Add spacing from other elements */
+  width: 100%; 
+  height: auto; 
+  margin-top: 100px; 
   text-align: center;
-  z-index: 10; /* Ensure it's on top of other elements */
+  z-index: 10; 
 }
 
 .candidates {
@@ -177,7 +177,7 @@ body {
 
 .presidential {
   display: block;
-  position: relative; /* Changed to relative */
+  position: relative; 
   margin-top: 20px;
   top: -175px;
   color: #4b4b4b;
@@ -187,7 +187,7 @@ body {
   line-height: 1.2;
   z-index: 12;
   text-align: center;
-  white-space: nowrap; /* Prevent text wrapping */
+  white-space: nowrap; 
 }
 
-/* Debugging Borders (Temporary) */
+
