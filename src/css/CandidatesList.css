@@ -64,7 +64,7 @@ body {
   height: 336px;
   top: 240px;
   left: 175px;
-  background: url("../src/images/Candidates/Male.png") no-repeat center;
+  background: url("../images/Candidates/Male.png") no-repeat center;
   background-size: cover;
   z-index: 5;
 }
@@ -75,7 +75,7 @@ body {
   height: 336px;
   top: 240px;
   left: 775px;
-  background: url("../src/images/Candidates/Female.png") no-repeat center;
+  background: url("../images/Candidates/Female.png") no-repeat center;
   background-size: cover;
   z-index: 5;
 }
