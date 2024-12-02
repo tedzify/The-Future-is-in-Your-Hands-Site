@@ -61,10 +61,10 @@ body {
   position: absolute;
   width: 64px;
   height: 219px;
-  left: 575px;
+  left: 550px;
   color: #ffffff;
   font-family: Inter, var(--default-font-family);
-  font-size: 50px;
+  font-size: 45px;
   font-weight: 900;
   line-height: 66.563px;
   text-align: left;
@@ -169,11 +169,75 @@ body {
   width: 778px;
   height: 778px;
   top: 500px;
-  left: 450px;
+  left: 455px;
   background: url("../images/StartUp/eclipse.png") no-repeat center;
   background-size: cover;
   filter: blur(2px);
   z-index: 2;
   border-radius: 50%;
   pointer-events: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .background {
+    position: absolute;
+    width: 50vw; /* Half the viewport width */
+    height: 100vh; /* Full viewport height */
+    top: 0;
+    left: 50%; /* Start from the middle */
+    background: #ca001b; /* Red section */
+  }
+
+  .background-1 {
+    position: absolute;
+    width: 50vw; /* Half the viewport width */
+    height: 100vh; /* Full viewport height */
+    top: 0;
+    left: 0; /* Start from the left */
+    background: #003d8e; /* Blue section */
+    z-index: 1; /* Ensure it appears behind other elements */
+  }
+
+  .cast {
+    font-size: 120px;
+    left: 15px;
+    top:20px;
+    color: #ffc300; /* Ensure visibility over blue section */
+  }
+
+  .your {
+    top: 70px;
+    left: 20px;
+    font-size: 22px;
+    color: #ffffff; /* White text for better contrast */
+  }
+
+  .vote {
+    font-size: 120px;
+    top:120px;
+    left: 20px;
+    color: #ffffff; /* White text for better contrast */
+  }
+
+  .pointy-finger {
+    width: 225px;
+    height:  500px;
+    left: -100px;
+    top: 400px;
+  }
+
+  #rectangle-button {
+    width: 200px; ;
+    top: 355px;
+    left: 25px;
+    font-size: 16px;
+  }
+
+  .ellipse {
+    width: 1000px;
+    height: 300px;
+    left: -250px;
+    top: 775px;
+  }
 }
