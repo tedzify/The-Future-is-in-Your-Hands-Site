@@ -28,7 +28,7 @@ body {
   top: -200px;
   left: 10%;
   transform: translateX(50%);
-  background: url("/src/images/CandidateInfo/e594d1f7a1dd88bd9eff4ff88fcb05729dcd02c2.png")
+  background: url("../images/CandidateInfo/e594d1f7a1dd88bd9eff4ff88fcb05729dcd02c2.png")
     no-repeat center;
   background-size: cover;
   z-index: 1;
@@ -42,7 +42,7 @@ body {
   top: 30px;
   left: 55%;
   transform: translateX(0%);
-  background: url("/src/images/CandidateInfo/cfa8588fd55943272fe57e0c190029afe2d937fc.png")
+  background: url("../images/CandidateInfo/cfa8588fd55943272fe57e0c190029afe2d937fc.png")
     no-repeat center;
   background-size: cover;
   z-index: 4;
