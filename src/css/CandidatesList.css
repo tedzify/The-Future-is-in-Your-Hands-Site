@@ -3,12 +3,17 @@
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
     "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  height: 100%;
   overflow: hidden;
   height: 100%;
 }
@@ -96,6 +101,7 @@ body {
   height: 100px;
   top: 575px;
   left: calc(50% - 520px);
+  left: calc(50% - 520px);
   background: #ffc300;
   border-radius: 11px;
   z-index: 5;
@@ -106,6 +112,7 @@ body {
   width: 409.615px;
   height: 100px;
   top: 575px;
+  left: calc(50% + 110px);
   left: calc(50% + 110px);
   background: #f3bc0b;
   border-radius: 11px;
@@ -153,7 +160,11 @@ body {
   width: 100%;
   height: auto;
   margin-top: 100px;
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
   text-align: center;
+  z-index: 10;
   z-index: 10;
 }
 
@@ -174,6 +185,7 @@ body {
 .presidential {
   display: block;
   position: relative;
+  position: relative;
   margin-top: 20px;
   top: -175px;
   color: #4b4b4b;
@@ -183,5 +195,6 @@ body {
   line-height: 1.2;
   z-index: 12;
   text-align: center;
+  white-space: nowrap;
   white-space: nowrap;
 }
