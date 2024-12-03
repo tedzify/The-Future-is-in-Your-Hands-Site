@@ -1,199 +1,91 @@
 :root {
   --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-    "Source Han Sans CN", sans-serif;
-
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --primary-color: #4b4b4b;
+  --highlight-color: #f3bc0b; /* Updated button color */
+  --background-gray: #e9e9e9;
+  --font-title: "Inria Serif", serif;
+  --font-button: "Josefin Sans", sans-serif;
 }
 
-html,
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
   height: 100%;
-  overflow: hidden;
-  height: 100%;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #ffffff;
+  background: var(--background-color);
+  font-family: var(--default-font-family);
 }
 
 .main-container {
-  position: relative;
-  width: 1920px;
-  height: 1080px;
-  background: #ffffff;
-  overflow: hidden;
-}
-
-.main-container,
-.main-container * {
+  width: 100%;
+  max-width: 1920px;
+  padding: 20px 50px;
   box-sizing: border-box;
 }
 
-.vote {
-  position: relative;
-  height: 850px;
-  width: 100%;
-  top: 10px;
-  left: 100px;
-  color: #dddddd;
-  font-family: Inria Serif, var(--default-font-family);
-  font-size: 500px;
-  font-weight: 700;
-  line-height: 675px;
-  z-index: 3;
-  text-align: center;
-}
-
-.rectangle {
-  position: absolute;
-  width: 100%;
-  height: 1024px;
-  top: 0;
-  left: 0;
-  background: #e9e9e9;
-  z-index: 2;
-}
-
-.image-1 {
-  position: absolute;
-  width: 550px;
-  height: 336px;
-  top: 240px;
-  left: 175px;
-  background: url("../images/CandidatesList/Male.png") no-repeat center;
-  background-size: cover;
-  z-index: 5;
-}
-
-.image-2 {
-  position: absolute;
-  width: 550px;
-  height: 336px;
-  top: 240px;
-  left: 775px;
-  background: url("../images/CandidatesList/Female.png") no-repeat center;
-  background-size: cover;
-  z-index: 5;
-}
-
-.rectangle-box {
-  position: absolute;
-  width: 100%;
-  height: 100px;
-  top: 550px;
-  left: 0;
-  background: #ba0003;
-  z-index: 4;
-}
-
-.rectangle-box-1 {
-  position: absolute;
-  width: 409.455px;
-  height: 100px;
-  top: 575px;
-  left: calc(50% - 520px);
-  left: calc(50% - 520px);
-  background: #ffc300;
-  border-radius: 11px;
-  z-index: 5;
-}
-
-.rectangle-3 {
-  position: absolute;
-  width: 409.615px;
-  height: 100px;
-  top: 575px;
-  left: calc(50% + 110px);
-  left: calc(50% + 110px);
-  background: #f3bc0b;
-  border-radius: 11px;
-  z-index: 5;
-}
-
-.candidate-name {
-  position: relative;
-  width: 239px;
-  height: 80px;
-  margin: 15px auto;
-  cursor: pointer;
-  font-family: Josefin Sans, var(--default-font-family);
-  font-size: 40px;
-  font-weight: 700;
-  background: transparent;
-  border: none;
-  text-align: center;
-}
-
-.candidate-name-4 {
-  position: relative;
-  width: 239px;
-  height: 80px;
-  margin: 15px auto;
-  cursor: pointer;
-  font-family: Josefin Sans, var(--default-font-family);
-  font-size: 40px;
-  font-weight: 700;
-  background: transparent;
-  border: none;
-  text-align: center;
-}
-
 .flex-row-c {
-  position: relative;
-  width: 876px;
-  height: 306px;
-  margin: 33.916px auto;
-  z-index: 1;
+  margin-bottom: 50px;
+  text-align: center;
 }
 
-.flex-row-c {
-  position: relative;
-  width: 100%;
-  height: auto;
-  margin-top: 100px;
-  width: 100%;
-  height: auto;
-  margin-top: 100px;
-  text-align: center;
-  z-index: 10;
-  z-index: 10;
+.section-title {
+  display: block;
+  margin: 20px 0;
+  font-size: 48px;
+  color: var(--primary-color);
+  font-family: var(--font-title);
+  font-weight: bold;
 }
 
 .candidates {
-  display: block;
-  position: relative;
-  margin: 0 auto;
-  top: 50px;
+  top: 10px;
+  font-size: 60px;
   color: #e10000;
-  font-family: Inria Serif, var(--default-font-family);
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.2;
-  z-index: 11;
-  text-align: center;
+  font-family: var(--font-title);
+  font-weight: bold;
 }
 
-.presidential {
-  display: block;
-  position: relative;
-  position: relative;
-  margin-top: 20px;
-  top: -175px;
-  color: #4b4b4b;
-  font-family: Inria Serif, var(--default-font-family);
-  font-size: 128px;
-  font-weight: 700;
-  line-height: 1.2;
-  z-index: 12;
-  text-align: center;
-  white-space: nowrap;
-  white-space: nowrap;
+.candidates-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
+.candidate-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+}
+
+.image-box {
+  width: 200px;
+  height: 200px;
+  background: var(--background-gray);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #ccc;
+}
+
+.candidate-button {
+  width: 100%;
+  padding: 10px 0;
+  background: var(--highlight-color); /* Updated button background color */
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.candidate-button:hover {
+  background: #e3a908; /* Slightly darker for hover effect */
+  transform: scale(1.05);
+}
+
+.candidate-button:active {
+  background: #cc9807; /* Even darker for active state */
+}
