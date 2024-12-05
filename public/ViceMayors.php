@@ -17,9 +17,9 @@ include '../includes/connect.php'; // Include the database connection
     <header>
       <nav>
         <ul>
-          <li><a href="Mayors">Mayoral Candidates</a></li>
+          <li><a href="Mayors">Mayor Candidates</a></li>
           <li>
-            <a href="ViceMayors" class="active">Vice Mayoral Candidates</a>
+            <a href="ViceMayors" class="active">Vice Mayor Candidates</a>
           </li>
           <li><a href="Councilors">Councilor Candidates</a></li>
         </ul>
