@@ -195,8 +195,8 @@ body {
   right: 20px;
   font-size: 18px;
   font-weight: bold;
-  color: white;
-  background-color: #cc9807;
+  color: rgb(0, 0, 0);
+  background-color: #f4bd0b;
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;

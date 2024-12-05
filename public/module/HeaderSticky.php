@@ -32,7 +32,7 @@
         </ul>
       </nav>
   <div class="button-container">
-    <a href="../Homepage" class="back-button">Back to Home</a>
+    <a href="../public/Homepage" class="back-button">Back to Home</a>
     <?php if (isset($_SESSION['admin_id']) || isset($_COOKIE['admin_id'])): ?>
       <a href="../includes/logout.php" class="login-button">Logout</a>
     <?php else: ?>

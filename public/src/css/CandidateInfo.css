@@ -1,149 +1,237 @@
+/* Load the Roboto font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+/* Define root variables for default font */
 :root {
-  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --default-font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+/* General Styles */
 body {
-  margin: 0px;
-  padding: 0;
-  font-family: var(--default-font-family);
-  overflow: hidden;
+  margin: 0;
+  font-family: var(--default-font-family); /* Apply the custom font */
+  background-color: #f5f5f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
+/* Main Container */
 .main-container {
-  position: relative;
-  width: 100vw; /* Take full width of the viewport */
-  height: 100vh; /* Take full height of the viewport */
-  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Combined Content Div */
+.content {
+  display: flex;
+  flex-direction: row; /* Align left and right sections horizontally */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 1200px; /* Restrict width for desktop view */
+  width: 100%;
   overflow: hidden;
-  margin: 0 auto;
-}
-.name {
-  color: red;
-}
-.empty {
-  position: absolute;
-  width: 1200px;
-  height: 1100px;
-  top: -200px;
-  left: 10%;
-  transform: translateX(50%);
-  background: url("../images/CandidateInfo/e594d1f7a1dd88bd9eff4ff88fcb05729dcd02c2.png")
-    no-repeat center;
-  background-size: cover;
-  z-index: 1;
 }
 
-.empty-1 {
-  padding: 10px;
-  position: absolute;
-  width: 600px;
-  height: 700px;
-  top: 30px;
-  left: 55%;
-  transform: translateX(0%);
-  background: url("../images/CandidateInfo/cfa8588fd55943272fe57e0c190029afe2d937fc.png")
-    no-repeat center;
-  background-size: cover;
-  z-index: 4;
+/* Left Section (Image) */
+.candidate-image {
+  flex: 1;
+  text-align: center;
+  background-color: #eee; /* Optional background for contrast */
+  position: relative; /* Reference point for the back button */
+  z-index: 1; /* Ensure the image has a lower stacking order */
 }
 
-.candidate-name {
-  position: absolute;
-  width: 845px;
-  height: 303px;
-  top: 30px;
-  left: 56px;
-  font-family: "Josefin Sans", var(--default-font-family);
-  font-size: 125px;
-  font-weight: 700;
-  line-height: 140px;
-  text-align: left;
-  z-index: 5;
+.candidate-image img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover; /* Make sure the image fills the space without distortion */
 }
 
-.rectangle,
-.rectangle-3,
-.lorem-ipsum,
-.rectangle-8,
-.rectangle-9,
-.rectangle-a,
-.rectangle-b,
-.rectangle-c {
-  position: absolute;
+/* Right Section (Details) */
+.candidate-details {
+  flex: 1;
+  padding: 20px;
 }
 
-.rectangle {
-  width: 264px;
-  height: 65px;
-  top: 280px;
-  left: 73px;
-  background: #0c51ac;
-  z-index: 6;
-  border-radius: 15px;
-}
-
-.rectangle-3 {
-  width: 64px;
-  height: 65px;
-  top: 280px;
-  left: 354px;
-  background: #b70909;
-  z-index: 9;
-  border-radius: 15px;
-}
-
-.lorem-ipsum {
-  width: 700px;
-  height: 192px;
-  top: 350px;
-  left: 73px;
-  font-family: "Josefin Sans", var(--default-font-family);
+.candidate-details h1 {
+  color: #f72585;
   font-size: 24px;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: left;
-  text-overflow: initial;
-  white-space: nowrap;
-  z-index: 10;
+  font-weight: 700; /* Bold the main header */
 }
 
-.rectangle-8 {
-  width: 1100px;
-  height: 347px;
-  top: 550px;
-  left: 0;
-  background: #f2c900;
-  z-index: 2;
+.candidate-details h2 {
+  color: #ff9e00;
+  font-size: 36px;
+  margin: 10px 0;
 }
 
-.rectangle-9 {
-  width: 250px;
-  height: 150px;
-  top: 25px;
-  left: 50px;
-  background: #ffffff;
-  z-index: 7;
-  border-radius: 15px;
+.candidate-details .alias {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 10px;
 }
 
-.rectangle-a {
-  width: 250px;
-  height: 150px;
-  top: 25px;
-  left: 350px;
-  background: #ffffff;
-  z-index: 8;
-  border-radius: 15px;
+.candidate-details .badge {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #d9c3ff;
+  color: #333;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
-.rectangle-b {
-  width: 250px;
-  height: 150px;
-  top: 25px;
-  left: 650px;
-  background: #ffffff;
-  opacity: 0.61;
-  z-index: 2;
-  border-radius: 15px;
+/* Remarks Section */
+.remarks-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.remarks-section ul li span {
+  font-weight: bold;
+  color: #f72585;
+}
+
+/* Education Section */
+.education-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.education-section ul li {
+  margin-bottom: 10px;
+}
+
+.education-section ul li span {
+  font-weight: bold;
+  color: #f72585;
+}
+
+/* Vote Label */
+.vote-label {
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  height: 25px;
+  left: 100px;
+  text-align: center;
+  color: #fff;
+  background-color: #333; /* Black background */
+  border-radius: 5px; /* No rounded corners for a rectangular button */
+  width: 200px;
+  text-transform: uppercase; /* Make text all uppercase */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  cursor: default; /* Static label */
+  letter-spacing: 2px; /* Space between letters for effect */
+}
+
+/* Text-based Back Button Styling */
+.back-button {
+  position: absolute; /* Position the button absolutely */
+  top: 10px; /* Distance from the top of the image */
+  left: 10px; /* Distance from the left of the image */
+  font-size: 18px; /* Adjust font size */
+  color: #fff; /* White text */
+  background-color: #333; /* Black background */
+  padding: 8px 16px; /* Padding around the text */
+  border-radius: 5px; /* Rounded corners */
+  text-transform: uppercase; /* Make text uppercase */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: transform 0.3s ease; /* Smooth transition for scaling effect */
+  font-weight: bold;
+  text-decoration: none; /* Remove underline */
+  z-index: 2; /* Ensure the button is above the image */
+  opacity: 0.7;
+}
+
+/* Hover effect for the text button */
+.back-button:hover {
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+  background-color: #444; /* Darken background on hover */
+}
+
+/* Responsive Design for Vote Label */
+@media (max-width: 1024px) {
+  .vote-label {
+    font-size: 16px; /* Slightly smaller font for smaller screens */
+    padding: 12px 24px; /* Adjust padding */
+    letter-spacing: 1.5px;
+    /* Adjust letter spacing */
+  }
+
+  .content {
+    max-width: 90%; /* Reduce width for medium screens */
+  }
+
+  .back-button {
+    font-size: 20px; /* Slightly larger font size for better visibility on medium screens */
+    padding: 12px 24px; /* Increase padding */
+    top: 15px; /* Move down a little to make space for larger size */
+    left: 15px; /* Move right for better positioning */
+  }
+}
+
+@media (max-width: 768px) {
+  .vote-label {
+    font-size: 14px; /* Smaller font for very small screens */
+    padding: 8px 15px; /* Adjust padding */
+    letter-spacing: 1px; /* Reduce letter spacing for readability */
+  }
+
+  .content {
+    flex-direction: column; /* Stack sections vertically on smaller screens */
+  }
+
+  .candidate-image,
+  .candidate-details {
+    max-width: 100%;
+  }
+
+  .back-button {
+    font-size: 22px; /* Make back button even bigger */
+    padding: 14px 28px; /* Increase padding */
+    top: 10px; /* Adjust vertical positioning */
+    left: 10px; /* Adjust horizontal positioning */
+  }
+}
+
+/* Mobile Design */
+@media (max-width: 480px) {
+  .vote-label {
+    text-align: center;
+    font-size: 12px; /* Smallest font size */
+    padding: 6px 12px; /* Further reduce padding */
+    letter-spacing: 1px; /* Further adjust letter-spacing */
+    width: 100%;
+  }
+
+  .candidate-details h2 {
+    font-size: 24px; /* Smaller font for title */
+  }
+
+  .candidate-details h1 {
+    font-size: 20px; /* Smaller font for header */
+  }
+
+  .candidate-details .badge {
+    font-size: 14px; /* Smaller badge text */
+  }
+
+  .back-button {
+    font-size: 10px; /* Larger font for mobile for better visibility */
+    padding: 16px 32px; /* Larger padding */
+    top: 5px; /* Adjust vertical positioning */
+    left: 5px; /* Adjust horizontal positioning */
+    opacity: 0.4;
+  }
 }
