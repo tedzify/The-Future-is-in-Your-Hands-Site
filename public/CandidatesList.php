@@ -4,39 +4,43 @@ include '../includes/connect.php'; // Include the database connection
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Candidates List</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap"
-    />
-    <link rel="stylesheet" href="src/css/CandidatesList.css" />
-  </head>
-  <body>
-    <div class="main-container">
-      <!-- Presidential Candidates -->
-      <div class="flex-row-c">
-        <span class="candidates">CANDIDATES</span>
-        
-        <?php
-        include 'module/CandidateBlock.php'; // Include the candidate block function
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Candidates</title>
+  <link rel="stylesheet" href="src/css/CandidateListModule.css" />
+  <script src="src/js/CandidateListModule.js"></script>
+</head>
+<body>
+  <?php include 'module/HeaderSticky.php'; ?>
 
-        // Display candidates from different sections
-        displayCandidates($conn, 'mayor_candidates', 'MAYOR');
-        displayCandidates($conn, 'v_mayor_candidates', 'VICE-MAYOR');
-        displayCandidates($conn, 'councilor_candidates', 'COUNCILOR');
+  <div class="main-container">
+    <div class="flex-row-c">
+      <span class="candidates">CANDIDATES</span>
+      
+      <?php
+      include 'module/CandidateBlock.php'; // Include the candidate block function
 
-        // Close the database connection
-        $conn->close();
-        ?>
+      // Determine which category to display based on a query parameter
+      $category = $_GET['category'] ?? 'mayor'; // Default to 'mayor' if no category is set
+
+      switch ($category) {
+        case 'vice-mayor':
+          displayCandidates($conn, 'v_mayor_candidates', 'VICE-MAYOR');
+          break;
+        case 'councilor':
+          displayCandidates($conn, 'councilor_candidates', 'COUNCILOR');
+          break;
+        case 'mayor':
+        default:
+          displayCandidates($conn, 'mayor_candidates', 'MAYOR');
+          break;
+      }
+
+      // Close the database connection
+      $conn->close();
+      ?>
     </div>
-
-    <script src="src/js/CandidateClickInfo.js"></script>
-  </body>
+  </div>
+</body>
 </html>

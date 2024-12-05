@@ -52,7 +52,7 @@ body {
   height: 1280px;
   top: -275px;
   left: -350px;
-  background: url("/src/images/Homepage/grey\ \(1\).png") no-repeat center;
+  background: url("../images/Homepage/grey\ \(1\).png") no-repeat center;
   background-size: cover;
   opacity: 0.6;
   z-index: 0;

@@ -4,6 +4,13 @@ header {
   padding: 10px 0;
 }
 
+.categories {
+  position: relative;
+  width: 50%;
+  justify-self: center;
+  z-index: 1;
+}
+
 nav ul {
   list-style: none;
   margin: 10px;
@@ -31,7 +38,7 @@ nav ul li a:hover {
 }
 
 /* Active Navigation Link */
-nav ul li a.active {
+nav ul li a:active {
   background-color: #f4bd0b; /* Highlight color for active link */
   color: #fff; /* Active link text color */
   font-weight: bold;
@@ -136,24 +143,6 @@ body {
 .candidate-button:active {
   background: #cc9807;
 }
-/* Back Button Styling (Positioned on the side) */
-.back-button-container {
-  position: fixed;
-  top: 20px; /* Adjust this to move it vertically */
-  left: 20px; /* Position it on the left side */
-  z-index: 1000; /* Ensure the button is above other content */
-}
-
-.back-button {
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-  background-color: rgb(159, 46, 46);
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
 
 .back-button:hover {
   background-color: #f4bd0b;
@@ -161,6 +150,65 @@ body {
 }
 
 .back-button:active {
+  background-color: #cc9807;
+  transform: scale(1);
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  right: 20px;
+  z-index: 0;
+}
+
+.back-button,
+.login-button {
+  font-size: 18px;
+  font-weight: bold;
+  color: #4b4b4b;
+  background-color: #f4bd0b;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover,
+.login-button:hover {
+  background-color: #f4bd0b;
+  transform: scale(1.05);
+}
+
+.back-button:active,
+.login-button:active {
+  background-color: #cc9807;
+  transform: scale(1);
+}
+
+.add-candidate-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #cc9807;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-candidate-button:hover {
+  background-color: #f4bd0b;
+  transform: scale(1.05);
+}
+
+.add-candidate-button:active {
   background-color: #cc9807;
   transform: scale(1);
 }
