@@ -1,8 +1,39 @@
+/* Navigation Bar */
+header {
+  background-color: rgb(159, 46, 46);
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #f4bd0b;
+  border-radius: 5px;
+}
+
 :root {
   --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif;
   --primary-color: #4b4b4b;
-  --highlight-color: #f3bc0b; /* Updated button color */
+  --highlight-color: #f4bd0b; /* Updated button color */
   --background-gray: #e9e9e9;
   --font-title: "Inria Serif", serif;
   --font-button: "Josefin Sans", sans-serif;
