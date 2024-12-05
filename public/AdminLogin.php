@@ -10,8 +10,50 @@
     <div class="login container">
       <div class="box form-box">
         <?php
-        
-        
+            include '../includes/connect.php'; // Include the database connection
+
+            session_start(); // Start the session
+
+            if (isset($_POST['submit'])) {
+                // Retrieve form data
+                $username = $_POST['username'];
+                $password = $_POST['password'];
+
+                // Prepare and execute the query to fetch the admin details
+                $query = "SELECT id, password FROM acc_admin WHERE username = ?";
+                $stmt = $conn->prepare($query);
+                $stmt->bind_param("s", $username);
+                $stmt->execute();
+                $result = $stmt->get_result();
+
+                if ($result->num_rows > 0) {
+                    // Fetch the admin data
+                    $admin = $result->fetch_assoc();
+
+                    // Verify the password
+                    if (password_verify($password, $admin['password'])) {
+                        // Password is correct, set session variables
+                        $_SESSION['admin_id'] = $admin['id'];
+                        $_SESSION['username'] = $username;
+
+                        // Redirect to the admin dashboard or homepage
+                        header("Location: Mayors");
+                        exit();
+                    } else {
+                          echo "<div class='message'>
+                                  <p>Invalid password.</p>
+                                </div><br>";
+                          echo "<a href='javascript:self.history.back()'>
+                                <button class='submit-btn'>Go Back</button>";
+                    }
+                } else {
+                          echo "<div class='message'>
+                                  <p>No admin found with that username.</p>
+                                </div><br>";
+                          echo "<a href='javascript:self.history.back()'>
+                                <button class='submit-btn'>Go Back</button>";
+                }
+            } else {
         ?>
         <header>Login</header>
         <form action="" method="post">
@@ -50,6 +92,7 @@
           </div>
         </form>
       </div>
+      <?php } ?>
     </div>
   </body>
 </html>

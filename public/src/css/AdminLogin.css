@@ -103,3 +103,24 @@ body {
 .links {
   margin-bottom: 0.94rem;
 }
+
+.message {
+  font-size: 1.13rem;
+  text-align: center;
+  background: #dfa5a5;
+  padding: 0.94rem 0;
+  border: 0.06rem solid #740a0a8e;
+  border-radius: 0.31rem;
+  margin-bottom: 0.63rem;
+  color: #000000;
+}
+.message-success {
+  font-size: 1.13rem;
+  text-align: center;
+  background: #8fdd93;
+  padding: 0.94rem 0;
+  border: 0.06rem solid #16740a8e;
+  border-radius: 0.31rem;
+  margin-bottom: 0.63rem;
+  color: #000000;
+}
