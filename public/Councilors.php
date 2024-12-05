@@ -24,6 +24,9 @@ include '../includes/connect.php'; // Include the database connection
           </li>
         </ul>
       </nav>
+      <div class="back-button-container">
+        <a href="Homepage" class="back-button">Back to Home</a>
+      </div>
     </header>
     <div class="main-container">
       <!-- Vice Mayor Candidates -->
