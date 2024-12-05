@@ -42,7 +42,7 @@
           </div>
           <div class="links">
             Are you a new admin?
-            <a href="AdminRegister.html">Create an account</a>
+            <a href="AdminRegister">Create an account</a>
           </div>
         </form>
       </div>
