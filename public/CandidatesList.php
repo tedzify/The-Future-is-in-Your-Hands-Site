@@ -1,5 +1,5 @@
 <?php
-include 'includes/connect.php'; // Include the database connection
+include '../includes/connect.php'; // Include the database connection
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +25,7 @@ include 'includes/connect.php'; // Include the database connection
         <span class="candidates">CANDIDATES</span>
         
         <?php
-        include 'CandidateBlock.php'; // Include the candidate block function
+        include 'module/CandidateBlock.php'; // Include the candidate block function
 
         // Display candidates from different sections
         displayCandidates($conn, 'mayor_candidates', 'MAYOR');
