@@ -63,15 +63,21 @@ body {
   font-size: 0.82rem;
   font-style: italic;
 }
-.form-box form .input.field input:not(:placeholder-shown):valid {
+.form-box
+  form
+  .input.field
+  input:not(:placeholder-shown):valid:not(.submit-btn) {
   outline: 0.01rem solid;
   outline-color: var(--color-frm-valid);
 }
-.form-box form .input.field input:not(:placeholder-shown):invalid {
+.form-box
+  form
+  .input.field
+  input:not(:placeholder-shown):invalid:not(.submit-btn) {
   outline: 0.01rem solid;
   outline-color: var(--color-frm-invalid);
 }
-.form-box form .input.field input:focus:invalid {
+.form-box form .input.field input:focus:invalid:not(.submit-btn) {
   outline: 0.01rem solid;
   outline-color: var(--color-frm-incomplete);
 }

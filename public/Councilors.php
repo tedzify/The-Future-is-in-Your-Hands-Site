@@ -17,8 +17,8 @@ include '../includes/connect.php'; // Include the database connection
     <header>
       <nav>
         <ul>
-          <li><a href="Mayors">Mayoral Candidates</a></li>
-          <li><a href="ViceMayors">Vice Mayoral Candidates</a></li>
+          <li><a href="Mayors">Mayor Candidates</a></li>
+          <li><a href="ViceMayors">Vice Mayor Candidates</a></li>
           <li>
             <a href="Councilors" class="active">Councilor Candidates</a>
           </li>
@@ -26,20 +26,19 @@ include '../includes/connect.php'; // Include the database connection
       </nav>
     </header>
     <div class="main-container">
-                <!-- Vice Mayor Candidates -->
+      <!-- Vice Mayor Candidates -->
       <div class="flex-row-c">
         <span class="candidates">CANDIDATES</span>
-        
+
         <?php
         include 'module/CandidateBlock.php'; // Include the candidate block function
 
         // Display candidates from different sections
-       displayCandidates($conn, 'councilor_candidates', 'COUNCILOR');
+           displayCandidates($conn, 'councilor_candidates', 'COUNCILOR');
 
         // Close the database connection
-        $conn->close();
-        ?>
-    </div>
+        $conn->close(); ?>
+      </div>
     </div>
     <script src="src/js/CandidateListModule.js"></script>
   </body>

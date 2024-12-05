@@ -9,6 +9,13 @@
   <body>
     <div class="login container">
       <div class="box form-box">
+        <?php 
+          include 'includes/connect.php';
+
+          if(isset($_POST['submit'])){
+            
+          }
+        ?>
         <header>Register</header>
         <form action="" method="post">
           <div class="input field">
@@ -25,7 +32,7 @@
           <div class="input field">
             <label for="email">Email</label>
             <input
-              title="Not a valid email address"
+              title="Must be a valid email address."
               pattern="((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])"
               type="email"
               name="email"
