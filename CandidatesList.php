@@ -28,9 +28,9 @@ include 'includes/connect.php'; // Include the database connection
         include 'CandidateBlock.php'; // Include the candidate block function
 
         // Display candidates from different sections
-        displayCandidates($conn, 'presidential_candidates', 'PRESIDENTIAL');
-        displayCandidates($conn, 'vp_candidates', 'VICE-PRESIDENTIAL');
-        displayCandidates($conn, 'other_candidates', 'SENATORIAL');
+        displayCandidates($conn, 'mayor_candidates', 'MAYOR');
+        displayCandidates($conn, 'v_mayor_candidates', 'VICE-MAYOR');
+        displayCandidates($conn, 'councilor_candidates', 'COUNCILOR');
 
         // Close the database connection
         $conn->close();
