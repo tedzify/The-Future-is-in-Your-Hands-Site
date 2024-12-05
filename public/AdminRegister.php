@@ -82,7 +82,7 @@
           </div>
           <div class="links">
             Already registered?
-            <a href="AdminLogin.html">Sign in</a>
+            <a href="AdminLogin">Sign in</a>
           </div>
         </form>
       </div>
