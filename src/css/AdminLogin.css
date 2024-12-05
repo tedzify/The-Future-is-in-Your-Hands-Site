@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--default-font-family);
+}
+
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --color-frm-valid: #8fdd93;
+  --color-frm-invalid: #dfa5a5;
+  --color-frm-incomplete: #e9eb76;
+}
+
+body {
+  background: oldlace;
+}
+
+.login.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+}
+
+.box {
+  background: #f2faff;
+  display: flex;
+  flex-direction: column;
+  padding: 1.56rem 1.56rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 0 128rem 0 rgba(0, 0, 0, 0.1),
+    0 32px 64px -48px rgba(0, 0, 0, 0.5);
+}
+
+.form-box {
+  width: 28.13rem;
+  margin: 0 0.63rem;
+}
+.form-box header {
+  font-size: 1.56rem;
+  font-weight: 600;
+  padding-bottom: 0.63rem;
+  margin-bottom: 0.63rem;
+  border-bottom: 0.06rem solid #d0d7db;
+}
+.form-box form .input.field {
+  display: flex;
+  margin-bottom: 0.63rem;
+  flex-direction: column;
+}
+.form-box form .input.field input {
+  width: 100%;
+  height: 2.5rem;
+  font-size: 1rem;
+  padding: 0 0.63rem;
+  border-radius: 0.31rem;
+  border: 0.06rem solid #d0d7db;
+  outline: none;
+}
+.form-box form .input.field input::placeholder {
+  font-size: 0.82rem;
+  font-style: italic;
+}
+.form-box form .input.field input:not(:placeholder-shown):valid {
+  outline: 0.01rem solid;
+  outline-color: var(--color-frm-valid);
+}
+.form-box form .input.field input:not(:placeholder-shown):invalid {
+  outline: 0.01rem solid;
+  outline-color: var(--color-frm-invalid);
+}
+.form-box form .input.field input:focus:invalid {
+  outline: 0.01rem solid;
+  outline-color: var(--color-frm-incomplete);
+}
+.form-box .submit-btn {
+  height: 2.19rem;
+  padding: 0 0.63rem;
+  margin-top: 0.63rem;
+  border: 0;
+  border-radius: 0.31rem;
+  font-size: 0.94rem;
+  background: rgba(21, 66, 117, 0.88);
+  color: #f2faff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.form-box .submit-btn:hover {
+  opacity: 0.9;
+}
+.form-box .submit-btn:active {
+  background: rgb(11, 36, 65);
+}
+
+.links {
+  margin-bottom: 0.94rem;
+}
