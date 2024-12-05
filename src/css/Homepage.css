@@ -1,16 +1,14 @@
 /* Global Styles */
 :root {
-  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-    "Source Han Sans CN", sans-serif;
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", 
+    "Microsoft Yahei UI", "Microsoft Yahei", "Source Han Sans CN", sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #ffffff; /* Background gradient */
   background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
   display: flex;
   justify-content: center;
@@ -28,6 +26,7 @@ body {
   width: 500px;
   height: 100%;
 }
+
 .year-2024 {
   display: flex;
   align-items: flex-start;
@@ -48,8 +47,6 @@ body {
 /* Background Layer */
 .background-layer {
   position: absolute;
-  overflow: hidden;
-  z-index: 0;
   width: 1200px;
   height: 1280px;
   top: -100px;
@@ -57,67 +54,79 @@ body {
   background: url("../images/Homepage/e594d1f7a1dd88bd9eff4ff88fcb05729dcd02c2.png")
     no-repeat center;
   background-size: cover;
+  opacity: 0.8;
   z-index: 0;
-  color: green; /* Place behind the carousel */
 }
 
-/* 3D Rotating Carousel */
-.scope {
+/* Card Hover Effect */
+.wrapper {
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.container {
+  height: 333px;
+  width: 250px;
+  padding: 12px;
   position: relative;
-  width: 350px;
-  height: 350px;
-  transform-style: preserve-3d;
-  margin: auto;
-  animation: slid 20s linear infinite; /* Continuous rotation */
-  animation-play-state: running; /* Ensure the animation starts playing */
+  background: linear-gradient(#529fe9 50%, #1e202b 50%) 0 100% no-repeat;
+  background-size: 100% 200%;
+  transition: 0.7s;
+  overflow: hidden;
+  opacity: 0.8; /* Lowered opacity */
 }
 
-/* Stop rotation when hovered */
-.scope:hover {
-  animation-play-state: paused; /* Pause the animation on hover */
-}
-
-/* Rectangles with Images */
-.scope span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 70%; /* Reduced width */
-  height: 60%; /* Reduced height */
-  transform-origin: center;
-  transform-style: preserve-3d;
-  transform: rotateY(calc(var(--i) * 45deg)) translateZ(450px) translateY(150px); /* Increased Y translation to move down */
-  border-radius: 10px;
-  overflow: hidden; /* Ensures the image stays within bounds */
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  transition-delay: 0.2s; /* Delay before the rectangle hover effect */
-}
-
-.scope span img {
+.img-wrapper {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  position: relative;
 }
 
-/* Hover Effect for Rectangles */
-.scope span:hover img {
-  transform: translateY(-30px) scale(1.2); /* Lift and scale on hover */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
-  transition-delay: 0s; /* No delay on hover for instant effect */
+.container img {
+  width: 100%;
+  height: 100%;
 }
 
-/* Delayed return on unhover */
-.scope span img {
-  transition-delay: 0.3s; /* Smooth delay when unhovered */
+.container:hover {
+  background-position: 0 0;
 }
 
-/* Keyframes for Continuous Rotation */
-@keyframes slid {
-  0% {
-    transform: perspective(1000px) rotateY(0deg);
+/* Responsive Layout */
+@media screen and (min-width: 992px) {
+  .wrapper {
+    gap: 10px;
   }
-  100% {
-    transform: perspective(1000px) rotateY(360deg);
+  .container {
+    height: 400px;
+    width: 300px;
+    padding: 15px;
   }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* Back Button Styling */
+.back-button {
+  position: fixed; /* Fixed position for consistent placement */
+  top: 20px; /* Distance from the top of the screen */
+  left: 20px; /* Distance from the left side of the screen */
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: var(--default-font-family);
+  background-color: #323c45;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease-in-out;
+  z-index: 10; /* Ensure it stays above other elements */
+}
+
+.back-button:hover {
+  background-color: #1e202b;
+  color: #d20000;
+  cursor: pointer;
 }
