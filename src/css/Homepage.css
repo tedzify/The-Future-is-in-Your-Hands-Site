@@ -49,12 +49,12 @@ body {
   position: absolute;
   width: 1200px;
   height: 1280px;
-  top: -100px;
+  top: -275px;
   left: -350px;
-  background: url("../images/Homepage/e594d1f7a1dd88bd9eff4ff88fcb05729dcd02c2.png")
+  background: url("/src/images/Homepage/grey\ \(1\).png")
     no-repeat center;
   background-size: cover;
-  opacity: 0.8;
+  opacity: 0.6;
   z-index: 0;
 }
 
@@ -71,22 +71,41 @@ body {
   width: 250px;
   padding: 12px;
   position: relative;
-  background: linear-gradient(#529fe9 50%, #1e202b 50%) 0 100% no-repeat;
+  background: linear-gradient(#000000 50%, #1e202b 50%) 0 100% no-repeat;
   background-size: 100% 200%;
   transition: 0.7s;
   overflow: hidden;
-  opacity: 0.8; /* Lowered opacity */
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .img-wrapper {
   width: 100%;
   height: 100%;
-  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container img {
-  width: 100%;
-  height: 100%;
+  width: 120%;
+  height: 120%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.5;
+}
+
+.text-content {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark background for better text contrast */
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .container:hover {
@@ -104,15 +123,17 @@ body {
     padding: 15px;
   }
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 /* Back Button Styling */
 .back-button {
-  position: fixed; /* Fixed position for consistent placement */
-  top: 20px; /* Distance from the top of the screen */
-  left: 20px; /* Distance from the left side of the screen */
+  position: fixed;
+  top: 20px;
+  left: 20px;
   padding: 10px 20px;
   font-size: 16px;
   font-family: var(--default-font-family);
@@ -122,11 +143,11 @@ a {
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: 0.3s ease-in-out;
-  z-index: 10; /* Ensure it stays above other elements */
+  z-index: 10;
 }
 
 .back-button:hover {
   background-color: #1e202b;
-  color: #d20000;
+  color: #8f987b;
   cursor: pointer;
 }
