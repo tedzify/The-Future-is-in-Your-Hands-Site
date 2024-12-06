@@ -10,7 +10,7 @@
     <div class="login container">
       <div class="box form-box">
         <?php
-            include '../includes/connect.php'; // Include the database connection
+            include 'includes/connect.php'; // Include the database connection
 
             session_start(); // Start the session
 

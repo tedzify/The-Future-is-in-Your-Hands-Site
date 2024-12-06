@@ -10,7 +10,7 @@
     <div class="login container">
       <div class="box form-box">
         <?php 
-          include '../includes/connect.php';
+          include 'includes/connect.php';
 
 if (isset($_POST['submit'])) {
     // Retrieve form data

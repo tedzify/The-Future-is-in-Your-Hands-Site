@@ -11,6 +11,6 @@ session_destroy();
 setcookie("admin_id", "", time() - 3600, "/");
 
 // Redirect to login page
-header("Location: /The-Future-is-in-Your-Hands-Site/public/AdminLogin");
+header("Location: ../AdminLogin");
 exit();
 ?>

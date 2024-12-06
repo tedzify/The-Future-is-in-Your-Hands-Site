@@ -1,5 +1,5 @@
 <?php
-include '../includes/connect.php'; // Include the database connection
+include 'includes/connect.php'; // Include the database connection
 ?>
 
 <!DOCTYPE html>
