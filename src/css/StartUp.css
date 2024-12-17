@@ -61,7 +61,7 @@ body {
   position: absolute;
   width: 64px;
   height: 219px;
-  left: 550px;
+  left: 565px;
   color: #ffffff;
   font-family: Inter, var(--default-font-family);
   font-size: 45px;
@@ -97,8 +97,8 @@ body {
   position: relative;
   width: 268px;
   height: 39px;
-  top: 475px;
-  left: 350px;
+  top: 395px;
+  left: 212px;
   cursor: pointer;
   background: #ffffff;
   border: 2px solid #003d8e;
@@ -151,11 +151,11 @@ body {
   justify-content: flex-start;
   position: absolute;
   height: 377px;
-  top: 150px;
-  left: 275px;
+  top: 110px;
+  left: 185px;
   color: #ffffff;
   font-family: Inter, var(--default-font-family);
-  font-size: 275px;
+  font-size: 175px;
   font-weight: 900;
   line-height: 363.068px;
   text-align: left;

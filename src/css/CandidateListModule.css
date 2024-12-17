@@ -189,26 +189,27 @@ body {
   transform: scale(1);
 }
 
-.add-candidate-button {
+.edit-candidate-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
   font-size: 18px;
   font-weight: bold;
-  color: rgb(0, 0, 0);
-  background-color: #f4bd0b;
+  color: white;
+  background-color: rgb(159, 46, 46);
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
 }
 
-.add-candidate-button:hover {
+.edit-candidate-button:hover {
   background-color: #f4bd0b;
   transform: scale(1.05);
 }
 
-.add-candidate-button:active {
+.edit-candidate-button:active {
   background-color: #cc9807;
   transform: scale(1);
 }

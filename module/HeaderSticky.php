@@ -40,5 +40,8 @@
         <?php endif; ?>
       </div>
     </header>
+    <?php
+    include 'module/EditList.php';
+     ?>
   </body>
 </html>
