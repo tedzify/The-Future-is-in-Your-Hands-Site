@@ -201,7 +201,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <div class="d-flex justify-content-center mt-4 mb-5 column-gap-3">
           <button type="submit" class="btn btn-success">Save</button>
-          <button type="button" class="btn btn-danger" onclick="window.location.href='CandidatesList'">Cancel</button>
+          <button type="button" class="btn btn-danger" onclick="window.location.href='AdminCandidatesList'">Cancel</button>
         </div>
       </form>
     </div>
