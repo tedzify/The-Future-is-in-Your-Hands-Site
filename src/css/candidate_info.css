@@ -24,6 +24,8 @@
   margin-left: 55px;
   margin-top: 0px;
   padding-top: 0px;
+  text-justify: distribute-all-lines;
+  text-align: justify;
 
   body {
     margin: 0;
@@ -196,6 +198,7 @@
   font-family: "Josefin Sans", sans-serif;
   font-size: 70px;
   padding-left: 30px;
+  width: 2000%;
   margin-top: 0px;
   margin-bottom: 10px;
   color: rgb(253, 135, 0);

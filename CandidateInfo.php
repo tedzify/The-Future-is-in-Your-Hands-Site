@@ -32,7 +32,7 @@ if ($result->num_rows > 0) {
     case 'mayor_candidates':
       $placeholderText = 'Mayor';
       break;
-    case 'vice_mayor_candidates':
+    case 'v_mayor_candidates':
       $placeholderText = 'Vice Mayor';
       break;
     case 'councilor_candidates':
