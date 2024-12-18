@@ -32,14 +32,16 @@
     <div class="button-container">
       <a href="Homepage" class="back-button">Back to Home</a>
       <?php if (isset($_SESSION['admin_id']) || isset($_COOKIE['admin_id'])): ?>
-        <a href="../includes/logout.php" class="login-button">Logout</a>
+        <a href="includes/logout.php" class="login-button">Logout</a>
       <?php else: ?>
         <a href="AdminLogin" class="login-button">Login</a>
       <?php endif; ?>
     </div>
   </header>
   <?php
-  include 'module/EditButtonFooter.php';
+  if (isset($_SESSION['admin_id']) || isset($_COOKIE['admin_id'])):
+    include 'EditButtonFooter.php';
+  endif;
   ?>
 </body>
 

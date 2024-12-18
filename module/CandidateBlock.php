@@ -1,5 +1,6 @@
 <?php
-function displayCandidates($conn, $tableName, $sectionTitle) {
+function displayCandidates($conn, $tableName, $sectionTitle)
+{
     // Query to fetch candidates from the specified table
     $sql = "SELECT * FROM $tableName";
     $result = $conn->query($sql);
@@ -12,10 +13,16 @@ function displayCandidates($conn, $tableName, $sectionTitle) {
         // Loop through each candidate and create a block
         while ($row = $result->fetch_assoc()) {
             echo '<div class="candidate-row">';
-            echo '<div class="image-box"></div>'; // You can add an image here if available
-            echo '<button class="candidate-button" onclick="showCandidate(\'' . $sectionTitle . '\', ' . $row['candidate_ID'] . ')">';
+            echo '<div class="image-box">';
+            if ($row['candidate_sex'] === 'Female') {
+                echo '<img src="src/images/CandidatesList/Female.png" alt="Female Placeholder">';
+            } else {
+                echo '<img src="src/images/CandidatesList/Male.png" alt="Male Placeholder">';
+            }
+            echo '</div>';
+            echo '<a href="CandidateInfo?id=' . $row['candidate_ID'] . '&table=' . $tableName . '" class="candidate-button">';
             echo htmlspecialchars($row['candidate_Name']); // Display candidate name
-            echo '</button>';
+            echo '</a>';
             echo '</div>';
         }
     } else {
@@ -25,4 +32,3 @@ function displayCandidates($conn, $tableName, $sectionTitle) {
     echo "</div>"; // Close candidates-grid
     echo "</div>"; // Close flex-row-c
 }
-?>

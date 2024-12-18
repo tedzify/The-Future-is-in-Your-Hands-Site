@@ -1,4 +1,15 @@
 <?php
+session_start();
+
+// Check if the admin is logged in
+if (!isset($_SESSION['admin_id'])) {
+  // Redirect to the index page if not logged in
+  header("Location: index.html");
+  exit();
+}
+?>
+
+<?php
 include 'includes/connect.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

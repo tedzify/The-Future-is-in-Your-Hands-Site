@@ -1,4 +1,15 @@
 <?php
+session_start();
+
+// Check if the admin is logged in
+if (!isset($_SESSION['admin_id'])) {
+  // Redirect to the index page if not logged in
+  header("Location: index.html");
+  exit();
+}
+?>
+
+<?php
 include 'includes/connect.php'; // Include the database connection
 
 // Function to fetch and display candidates from the selected table
@@ -51,7 +62,6 @@ function displayCandidates($conn, $tableName)
   </nav>
 
   <?php
-  session_start(); // Start the session at the beginning of the file
 
   if (isset($_SESSION['alert'])) {
     echo $_SESSION['alert'];

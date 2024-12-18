@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 
 // Unset all session variables
@@ -11,6 +11,5 @@ session_destroy();
 setcookie("admin_id", "", time() - 3600, "/");
 
 // Redirect to login page
-header("Location: ../AdminLogin");
+header("Location: ../CandidatesList");
 exit();
-?>

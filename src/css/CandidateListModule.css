@@ -119,6 +119,15 @@ body {
   border-radius: 10px;
   margin-bottom: 10px;
   border: 2px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.image-box img {
+  max-width: 180%;
+  max-height: 180%;
+  object-fit: cover;
 }
 
 /* Candidate Buttons */
@@ -133,6 +142,10 @@ body {
   border: none;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+a.candidate-button {
+  text-decoration: none;
+  color: black;
 }
 
 .candidate-button:hover {

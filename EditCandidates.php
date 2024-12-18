@@ -1,4 +1,15 @@
 <?php
+session_start();
+
+// Check if the admin is logged in
+if (!isset($_SESSION['admin_id'])) {
+  // Redirect to the index page if not logged in
+  header("Location: index.html");
+  exit();
+}
+?>
+
+<?php
 include 'includes/connect.php';
 
 if (isset($_GET['id']) && isset($_GET['table'])) {
@@ -76,18 +87,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   // Update the candidate's information in the database
   $updateSql = "UPDATE $tableName SET 
-                    candidate_Name = ?, 
-                    candidate_Age = ?, 
-                    candidate_sex = ?, 
-                    candidate_Party = ?, 
-                    current_Position = ?, 
-                    education = ?, 
-                    achievements = ?, 
-                    public_Experience = ?, 
-                    other_details = ?
-                  WHERE candidate_ID = ?";
+                candidate_Name = ?, 
+                candidate_Age = ?, 
+                candidate_sex = ?, 
+                candidate_Party = ?, 
+                current_Position = ?, 
+                education = ?, 
+                achievements = ?, 
+                public_Experience = ?, 
+                other_details = ?
+              WHERE candidate_ID = ?";
   $updateStmt = $conn->prepare($updateSql);
-  $updateStmt->bind_param("sissssssi", $updatedCandidateName, $updatedCandidateAge, $updatedCandidateSex, $updatedCandidateParty, $updatedCurrentPosition, $updatedEducation, $updatedAchievements, $updatedPublicExperience, $updatedOtherDetails, $candidateID);
+  $updateStmt->bind_param("sisssssssi", $updatedCandidateName, $updatedCandidateAge, $updatedCandidateSex, $updatedCandidateParty, $updatedCurrentPosition, $updatedEducation, $updatedAchievements, $updatedPublicExperience, $updatedOtherDetails, $candidateID);
 
   if ($updateStmt->execute()) {
     $_SESSION['alert'] = "<div class='alert alert-success'>Candidate updated successfully.</div>";
@@ -118,8 +129,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       style="background-color: #f4bd0b; color: white;">
       <i class="fas fa-arrow-left"></i>
     </a>
-    <span class="placeholder-text fs-3 fw-medium" style="color: white;"><?php echo $placeholderText; ?></span><span class="fs-3 fw-medium"
-      style="color: white;">&nbsp;Candidate</span>
+    <span class="placeholder-text fs-3 fw-medium" style="color: white;"><?php echo $placeholderText; ?></span><span
+      class="fs-3 fw-medium" style="color: white;">&nbsp;Candidate</span>
   </nav>
   <div class="container">
     <div class="text-center mb-4">
@@ -131,46 +142,56 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="row mb-3">
           <div class="col-md-7 mb-3">
             <label for="candidate_Name" class="form-label">Name:</label>
-            <input type="text" name="candidate_Name" id="candidate_Name" class="form-control" value="<?php echo htmlspecialchars($candidateName); ?>" required>
+            <input type="text" name="candidate_Name" id="candidate_Name" class="form-control"
+              value="<?php echo htmlspecialchars($candidateName); ?>" required>
           </div>
           <div class="col-md-2 mb-3">
             <label for="candidate_Age" class="form-label">Age:</label>
-            <input type="text" name="candidate_Age" id="candidate_Age" class="form-control" value="<?php echo htmlspecialchars($candidateAge); ?>" required>
+            <input type="text" name="candidate_Age" id="candidate_Age" class="form-control"
+              value="<?php echo htmlspecialchars($candidateAge); ?>" required>
           </div>
           <div class="col-md-3 mb-3">
             <label for="candidate_sex" class="form-label">Sex:</label>
-            <input type="text" name="candidate_sex" id="candidate_sex" class="form-control" value="<?php echo htmlspecialchars($candidateSex); ?>" required>
+            <input type="text" name="candidate_sex" id="candidate_sex" class="form-control"
+              value="<?php echo htmlspecialchars($candidateSex); ?>" required>
           </div>
         </div>
         <div class="row mb-3">
           <div class="col-md-6 mb-3">
             <label for="candidate_Party" class="form-label">Political Party:</label>
-            <input type="text" name="candidate_Party" id="candidate_Party" class="form-control" value="<?php echo htmlspecialchars($candidateParty); ?>" required>
+            <input type="text" name="candidate_Party" id="candidate_Party" class="form-control"
+              value="<?php echo htmlspecialchars($candidateParty); ?>" required>
           </div>
           <div class="col-md-6 mb-3">
             <label for="current_Position" class="form-label">Current Position:</label>
-            <input type="text" name="current_Position" id="current_Position" class="form-control" value="<?php echo htmlspecialchars($currentPosition); ?>">
+            <input type="text" name="current_Position" id="current_Position" class="form-control"
+              value="<?php echo htmlspecialchars($currentPosition); ?>">
           </div>
         </div>
         <div class="mb-3">
           <label for="education" class="form-label">Education:</label>
-          <textarea name="education" id="education" class="form-control" rows="3"><?php echo htmlspecialchars($education); ?></textarea>
+          <textarea name="education" id="education" class="form-control"
+            rows="3"><?php echo htmlspecialchars($education); ?></textarea>
         </div>
         <div class="mb-3">
           <label for="achievements" class="form-label">Achievements:</label>
-          <textarea name="achievements" id="achievements" class="form-control" rows="3"><?php echo htmlspecialchars($achievements); ?></textarea>
+          <textarea name="achievements" id="achievements" class="form-control"
+            rows="3"><?php echo htmlspecialchars($achievements); ?></textarea>
         </div>
         <div class="mb-3">
           <label for="public_Experience" class="form-label">Public Experience:</label>
-          <textarea name="public_Experience" id="public_Experience" class="form-control" rows="3"><?php echo htmlspecialchars($publicExperience); ?></textarea>
+          <textarea name="public_Experience" id="public_Experience" class="form-control"
+            rows="3"><?php echo htmlspecialchars($publicExperience); ?></textarea>
         </div>
         <div class="mb-3">
           <label for="other_details" class="form-label">Other Details:</label>
-          <textarea name="other_details" id="other_details" class="form-control" rows="3"><?php echo htmlspecialchars($otherDetails); ?></textarea>
+          <textarea name="other_details" id="other_details" class="form-control"
+            rows="3"><?php echo htmlspecialchars($otherDetails); ?></textarea>
         </div>
         <div class="d-flex justify-content-center mt-4 mb-5 column-gap-3">
           <button type="submit" class="btn btn-success">Save</button>
-          <button type="button" class="btn btn-danger" onclick="window.location.href='AdminCandidatesList'">Cancel</button>
+          <button type="button" class="btn btn-danger"
+            onclick="window.location.href='AdminCandidatesList'">Cancel</button>
         </div>
       </form>
     </div>

@@ -1,6 +1,13 @@
 <?php
 session_start(); // Start the session at the beginning of the file
 
+// Check if the admin is logged in
+if (!isset($_SESSION['admin_id'])) {
+    // Redirect to the index page if not logged in
+    header("Location: index.html");
+    exit();
+}
+
 include 'includes/connect.php';
 
 if (isset($_GET['id']) && isset($_GET['table'])) {
