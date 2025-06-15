@@ -1,0 +1,234 @@
+.back-button {
+  display: inline-block;
+  background-color: rgb(253, 135, 0);
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: "Josefin Sans", sans-serif;
+  margin: 10px; /* Add some margin for spacing */
+  position: relative; /* Set position to relative */
+  z-index: 10; /* Set a high z-index */
+}
+
+.back-button:hover {
+  background-color: rgb(230, 115, 0); /* Darker shade for hover effect */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.biography-info {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 15px;
+  width: 500px;
+  margin-left: 55px;
+  margin-top: 0px;
+  padding-top: 0px;
+  text-justify: distribute-all-lines;
+  text-align: justify;
+
+  body {
+    margin: 0;
+    font-family: var(--default-font-family);
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    height: 100vh;
+  }
+
+  .candidate-image-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .candidate-map {
+    position: absolute;
+    top: -150px;
+    left: -30px;
+    opacity: 0.4;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
+
+  .candidate-portrait {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: -500px;
+    padding-top: 115px;
+    height: 820px;
+    z-index: 2;
+  }
+
+  .candidate-details-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .candidate-name-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .candidate-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .candidate-info-heading {
+    margin-top: 0;
+  }
+
+  .candidate-info-text {
+    margin-bottom: 10px;
+  }
+}
+
+.biography-title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: underline;
+  width: 1000%;
+  margin-left: 35px;
+  margin-top: 0px;
+  color: rgb(36, 36, 36);
+}
+
+.date-two {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  width: 120px;
+  margin-left: 55px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: rgb(253, 135, 0);
+}
+.date-one-university {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  width: 300px;
+  margin-left: 75px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: rgb(36, 36, 36);
+}
+.date-one {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  width: 120px;
+  margin-left: 55px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: rgb(253, 135, 0);
+}
+.education-info {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: underline;
+  width: 120px;
+  margin-left: 35px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-top: 30px;
+  color: rgb(36, 36, 36);
+}
+.japan-info {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 15px;
+  width: 500px;
+  margin-left: 55px;
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-bottom: 8px;
+  color: rgb(36, 36, 36);
+}
+.japan {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  width: 500px;
+  margin-left: 35px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  color: rgb(36, 36, 36);
+}
+.remarks-title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: underline;
+  width: 1000%;
+  margin-left: 35px;
+  margin-top: 0px;
+  color: rgb(36, 36, 36);
+}
+
+.party-name {
+  font-family: "Josefin Sans", sans-serif;
+  margin-left: 35px;
+  margin-top: 0px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 120px;
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(203, 0, 27);
+  text-align: center;
+}
+.for-mayor {
+  font-family: "Josefin Sans", sans-serif;
+  padding-left: 35px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-style: italic;
+  color: rgb(203, 0, 27);
+}
+.candidate-name {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 70px;
+  padding-left: 30px;
+  width: 2000%;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: rgb(253, 135, 0);
+}
+.candidate-name-div {
+  width: 30px;
+}
+.candidate-image {
+  position: relative;
+  width: 100%; /* Make sure it spans the full width */
+  height: 100vh; /* Or you can adjust this height as needed */
+  display: block;
+}
+
+.candidate-portrait {
+  position: fixed; /* Ensure Arnold is positioned absolutely within the container */
+  top: 0;
+  left: 0;
+  margin-left: -500px;
+  padding-top: 115px;
+  height: 820px;
+  z-index: 2; /* Arnold image is on top */
+}
+
+.map {
+  position: fixed; /* Grey map is positioned behind Arnold */
+  top: -150px;
+  left: -30px;
+  opacity: 0.4;
+  z-index: 1; /* Grey map is behind Arnold */
+  width: 50%; /* Make sure it fills the container */
+  height: 100%; /* Ensure the map covers the container */
+}
